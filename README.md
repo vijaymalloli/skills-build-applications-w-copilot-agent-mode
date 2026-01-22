@@ -1,16 +1,32 @@
-# Build Applications with GitHub Copilot Agent Mode
+# OctoFit Tracker App (scaffold)
 
-<img src="https://octodex.github.com/images/Professortocat_v2.png" align="right" height="200px" />
+This branch adds a minimal scaffold for the OctoFit Tracker App and a script to create a Python virtual environment and install requirements.
 
-Hey vijaymalloli!
+Quick setup (Unix/macOS):
 
-Mona here. I'm done preparing your exercise. Hope you enjoy! 💚
+1. Fetch and check out the branch:
+   git fetch origin build-octofit-app
+   git checkout -b build-octofit-app origin/build-octofit-app
 
-Remember, it's self-paced so feel free to take a break! ☕️
+2. Create a virtual environment and install requirements (one-line):
+   bash scripts/setup_venv.sh
 
-[![](https://img.shields.io/badge/Go%20to%20Exercise-%E2%86%92-1f883d?style=for-the-badge&logo=github&labelColor=197935)](https://github.com/vijaymalloli/skills-build-applications-w-copilot-agent-mode/issues/1)
+3. Or run manually:
+   python -m venv .venv
+   source .venv/bin/activate
+   python -m pip install --upgrade pip
+   pip install -r requirements.txt
 
----
+4. Run the FastAPI app (after activating venv):
+   uvicorn octofit.main:app --reload
 
-&copy; 2025 GitHub &bull; [Code of Conduct](https://www.contributor-covenant.org/version/2/1/code_of_conduct/code_of_conduct.md) &bull; [MIT License](https://gh.io/mit)
+Windows PowerShell (manual):
+   python -m venv .venv
+   .\.venv\Scripts\Activate.ps1
+   python -m pip install --upgrade pip
+   pip install -r requirements.txt
 
+Files added:
+- requirements.txt
+- scripts/setup_venv.sh (creates venv and installs requirements)
+- octofit/main.py (minimal FastAPI app)
